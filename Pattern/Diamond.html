@@ -1,0 +1,65 @@
+<script>
+  const num = 5;
+
+  const diamond = (num) => {
+    for (let i = 1; i <= num; i++) {
+      for (let k = 1; k <= num - i; k++) {
+        document.write("&nbsp;&nbsp");
+      }
+
+      for (let j = 1; j <= i; j++) {
+        document.write("*" + "&nbsp;&nbsp");
+      }
+      document.write("<br>");
+    }
+
+    for (let i = 1; i <= num; i++) {
+      for (let k = 1; k <= i; k++) {
+        document.write("&nbsp;&nbsp");
+      }
+
+      for (let j = 1; j <= num - i; j++) {
+        document.write("*" + "&nbsp;&nbsp");
+      }
+      document.write("<br>");
+    }
+  };
+  diamond(num);
+
+  function printSpacedPyramid(rows) {
+    for (let i = 1; i <= rows; i++) {
+      let row = "";
+
+      // Add spaces to center-align the stars
+      for (let j = 1; j <= rows - i; j++) {
+        row += " ";
+      }
+
+      // Add stars with spaces
+      for (let k = 1; k <= i; k++) {
+        row += "* ";
+      }
+
+      console.log(row); // Trim trailing spaces for a clean look
+    }
+
+    for (let i = 1; i <= rows; i++) {
+      let row = "";
+
+      // Add spaces to center-align the stars
+      for (let j = 1; j <= i; j++) {
+        row += " ";
+      }
+
+      // Add stars with spaces
+      for (let k = 1; k <= rows - i; k++) {
+        row += "* ";
+      }
+
+      console.log(row); // Trim trailing spaces for a clean look
+    }
+  }
+
+  // Call the function to print the pattern
+  printSpacedPyramid(5);
+</script>
